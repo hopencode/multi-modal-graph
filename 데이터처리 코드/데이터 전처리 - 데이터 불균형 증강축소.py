@@ -17,5 +17,5 @@ nonfraud_sampled = df_nonfraud.sample(n=len(df_fraud) * 10, random_state=42)
 
 # 5. 합치기 (사기 거래 전부 + 다운샘플링된 정상 거래)
 df_balanced = pd.concat([df_fraud, nonfraud_sampled]).sample(frac=1, random_state=42)  # 섞기
-balanced_path = "../raw/transaction_labeled_balanced.csv"
+balanced_path = "../raw/transaction_joined_balanced.csv"
 df_balanced.to_csv(balanced_path, index=False)

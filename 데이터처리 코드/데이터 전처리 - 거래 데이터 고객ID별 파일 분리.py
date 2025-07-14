@@ -55,10 +55,10 @@ def split_csv_by_client_id(input_file_path, output_directory=None):
 
 if __name__ == "__main__":
     # 분할할 원본 파일 경로
-    input_combined_csv = '../transactions_fraud_label_data.csv'
+    input_combined_csv = '../raw/transactions_fraud_label_data.csv'
 
     # 고객별 파일들을 저장할 디렉토리 (선택 사항)
     # 지정하지 않으면 input_combined_csv 파일과 같은 위치에 'client_transactions' 폴더 생성
-    output_base_dir = '../transactions_data_label_split' 
+    output_base_dir = '../raw/transactions_data_label_split'
 
     split_csv_by_client_id(input_combined_csv, output_base_dir)
